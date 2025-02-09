@@ -1,0 +1,21 @@
+version: '3.8'
+services:
+  search-ui:
+    image: node:20-alpine
+    working_dir: /app
+    ports:
+      - "3000:3000"
+    environment:
+      - VITE_ELASTICSEARCH_URL=http://localhost:9200
+      - HOST=0.0.0.0
+    volumes:
+      - ./:/app
+    command: >
+      sh -c "npm install &&
+             npm run dev"
+    networks:
+      - elastic
+
+networks:
+  elastic:
+    external: true

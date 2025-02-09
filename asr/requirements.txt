@@ -1,0 +1,10 @@
+fastapi
+numpy
+uvicorn
+torch
+torchaudio
+transformers
+tqdm
+pandas
+python-multipart
+requests

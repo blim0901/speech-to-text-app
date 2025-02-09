@@ -70,7 +70,7 @@ Example response:
 
 ``` json
 {
-    "transcription": "be careful with your prognostications said the stranger",
+    "transcription": "BE CAREFUL WITH YOUR PROGNOSTICATIONS SAID THE STRANGER",
     "duration": 5.1
 }
 ```
@@ -202,7 +202,7 @@ curl -X GET "localhost:9200/cv-transcriptions/_search?size=1&pretty"
 Example response:
 ``` json
 {
-  "took" : 96,
+  "took" : 155,
   "timed_out" : false,
   "_shards" : {
     "total" : 2,
@@ -226,7 +226,8 @@ Example response:
           "text" : "then why should they be surprised when they see one",
           "up_votes" : 2,
           "down_votes" : 0,
-          "generated_text" : "then why should they be surprised when they see one"
+          "duration" : 3.6,
+          "generated_text" : "THEN WHY SHOULD THEY BE SURPRISED WHEN THEY SEE ONE"
         }
       }
     ]
